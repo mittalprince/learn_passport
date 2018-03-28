@@ -6,7 +6,7 @@ const profileRoutes = require('./routes/profile-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 4000;
 
 const app = express();
 
