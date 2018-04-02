@@ -4,7 +4,7 @@ module.exports = {
         clientSecret : '4Zs5EbgRu46qOiN0DgjT1LKj'
     },
     mongodb:{
-        dbURL : 'mongodb://<dbuser>:<dbpassword>@ds227469.mlab.com:27469/<databasename>'
+        dbURL : 'mongodb://<dbuser>:<dbpassword>@ds123499.mlab.com:23499/socialauthentication'
     },
     session:{
         cookieKey: 'miitalprinceisawesome'
