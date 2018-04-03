@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
@@ -26,7 +27,7 @@ app.use(passport.session());
 
 
 // connect to mongodb
-mongoose.connect(keys.mongodb.dbURL, () => {
+mongoose.connect('mongodb://${process.env.usernaame}:{$process.env.password}@ds123499.mlab.com:23499/socialauthentication', () => {
     console.log('connected to mongodb');
 });
 
