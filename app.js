@@ -22,7 +22,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb://'+process.env.usernaame+':'+process.env.password+'@ds123499.mlab.com:23499/socialauthentication', () => {
+mongoose.connect('mongodb://'+process.env.username+':'+process.env.password+'@ds123499.mlab.com:23499/socialauthentication', () => {
     console.log('connected to mongodb');
 });
 
@@ -36,3 +36,10 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log('app now listening for requests on port 4000');
 });
+
+module.exports ={
+    google:{
+        clientID:process.env.clientID,
+        clientSecret:process.env.clientSecret
+    }
+};
