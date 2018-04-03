@@ -39,7 +39,7 @@ app.listen(port, () => {
 
 module.exports ={
     google:{
-        clientId:process.env.clientId,
-        clientSecret:process.env.clientSecret
+        clientID: process.env.clientID,
+        clientSecret: process.env.clientSecret
     }
 };
