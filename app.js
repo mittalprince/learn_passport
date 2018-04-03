@@ -37,9 +37,3 @@ app.listen(port, () => {
     console.log('app now listening for requests on port 4000');
 });
 
-module.exports ={
-    google:{
-        clientID: process.env.clientID,
-        clientSecret: process.env.clientSecret
-    }
-};
