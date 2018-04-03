@@ -12,30 +12,23 @@ var port = process.env.PORT || 4000;
 
 const app = express();
 
-// set view engine
 app.set('view engine', 'ejs');
 
-// set up session cookies
 app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000,
-    keys: [keys.session.cookieKey]
+    keys:'thisisawesome'
 }));
 
-// initialize passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-// connect to mongodb
-mongoose.connect('mongodb://${process.env.usernaame}:{$process.env.password}@ds123499.mlab.com:23499/socialauthentication', () => {
+mongoose.connect('mongodb://'+process.env.usernaame+':'+process.env.password+'@ds123499.mlab.com:23499/socialauthentication', () => {
     console.log('connected to mongodb');
 });
 
-// set up routes
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
 
-// create home route
 app.get('/', (req, res) => {
     res.render('home', { user: req.user });
 });
