@@ -1,10 +1,12 @@
-module.exports={
-    google:{
-        clintID:'ypur clientid',
-        clientSecret:'your client secret'
+module.exports = {
+    google: {
+        clientID:process.env.clientID,
+        clientSecret:process.env.clientSecret
     },
-    mongdb:{
-      dbURL:'mongodb://<yourusername>:,</yourusername>:<yourpassword>@ds123499.mlab.com:23499/socialauthentication'
+    mongodb: {
+        dbURI: `mongodb://${process.env.username}:${password}@ds235169.mlab.com:35169/social-authentication`
     },
-    session:'mittalprinceawesome'
-}
+    session: {
+        cookieKey: 'mittalprinceawesome'
+    }
+};
