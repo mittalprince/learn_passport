@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = {
     google: {
         clientID:process.env.clientID,
