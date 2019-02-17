@@ -14,14 +14,15 @@ router.get('/logout', (req, res) => {
 
 // auth with google+
 router.get('/google', passport.authenticate('google', {
-    scope: ['profile']
+    scope: ' https://www.googleapis.com/auth/userinfo.profile'
 }));
 
 // callback route for google to redirect to
 // hand control to passport to use code to grab profile info
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     // res.send(req.user);
-    res.redirect('/profile');
+
+    res.redirect('https://www.googleapis.com/oauth2/v1/userinfo?alt=json');
 });
 
 module.exports = router;
