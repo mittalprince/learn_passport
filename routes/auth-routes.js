@@ -21,8 +21,8 @@ router.get('/google', passport.authenticate('google', {
 // hand control to passport to use code to grab profile info
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     // res.send(req.user);
-
-    res.redirect('https://www.googleapis.com/oauth2/v1/userinfo?alt=json');
+    
+    res.redirect('/profile');
 });
 
 module.exports = router;
